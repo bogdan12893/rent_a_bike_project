@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rent_a_bike.rentBIkeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="681.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="759.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#4983b9" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="101.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="759.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#4983b9" />
+                  <Stop color="WHITE" offset="0.42528735632183906" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Circle layoutX="681.0" layoutY="69.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#2197ff9c" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <ImageView fitHeight="84.0" fitWidth="84.0" layoutX="639.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img_bikes/bike_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bikePicture" fitHeight="246.0" fitWidth="246.0" layoutX="479.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img_bikes/r1.jpg" />
+         </image></ImageView>
+      <TableView fx:id="regUsers" layoutY="437.0" prefHeight="200.0" prefWidth="759.0">
+        <columns>
+            <TableColumn fx:id="regId" prefWidth="50.0" text="ID" />
+          <TableColumn fx:id="regSurname" prefWidth="173.0" text="Surname" />
+          <TableColumn fx:id="regName" minWidth="0.0" prefWidth="173.0" text="Name" />
+            <TableColumn fx:id="regBikemodel" prefWidth="269.0" text="Bike Model" />
+            <TableColumn fx:id="regDate" prefWidth="93.0" text="Date" />
+        </columns>
+      </TableView>
+      <Text layoutX="43.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent a Bike">
+         <font>
+            <Font name="Calibri Bold" size="46.0" />
+         </font>
+      </Text>
+      <Button layoutX="17.0" layoutY="394.0" mnemonicParsing="false" onAction="#rentNow" text="Rent now!" />
+      <Button layoutX="695.0" layoutY="644.0" mnemonicParsing="false" onAction="#exit_app" prefHeight="25.0" prefWidth="57.0" text="Exit" />
+      <Button layoutX="103.0" layoutY="394.0" mnemonicParsing="false" onAction="#edit_user" prefHeight="25.0" prefWidth="70.0" text="Edit" />
+      <Button layoutX="191.0" layoutY="394.0" mnemonicParsing="false" onAction="#delete_user" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+      <ComboBox fx:id="bikeList" layoutX="29.0" layoutY="124.0" onAction="#bikeShow" prefHeight="25.0" prefWidth="180.0" promptText="Choose Bike" visibleRowCount="5" />
+      <TitledPane animated="false" layoutX="234.0" layoutY="124.0" text="Bike Specifications">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="220.0" prefWidth="220.0">
+               <children>
+                  <TextField fx:id="groupSet" layoutX="82.0" layoutY="14.0" prefHeight="25.0" prefWidth="130.0" />
+                  <Label layoutX="14.0" layoutY="18.0" text="Groupset:" />
+                  <TextField fx:id="weight" layoutX="82.0" layoutY="52.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="14.0" layoutY="56.0" text="Weight:" />
+                  <Label layoutX="14.0" layoutY="93.0" text="Short info:" />
+                  <TextArea fx:id="bikeInfo" editable="false" layoutX="5.0" layoutY="120.0" prefHeight="93.0" prefWidth="209.0" wrapText="true" />
+                  <Label layoutX="157.0" layoutY="56.0" text="Kg" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button layoutX="275.0" layoutY="394.0" mnemonicParsing="false" onAction="#info_price" prefHeight="25.0" prefWidth="70.0" text="Info/Price" />
+   </children>
+</AnchorPane>

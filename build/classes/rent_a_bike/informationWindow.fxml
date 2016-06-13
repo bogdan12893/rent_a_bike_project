@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="251.0" prefWidth="391.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rent_a_bike.InformationWindowController">
+   <children>
+      <Button fx:id="eWindow" layoutX="322.0" layoutY="212.0" mnemonicParsing="false" onAction="#exitWindow" prefHeight="25.0" prefWidth="55.0" text="Exit" />
+      <TableView fx:id="bTable" prefHeight="107.0" prefWidth="391.0">
+        <columns>
+          <TableColumn fx:id="bEquip" prefWidth="252.0" text="Bike" />
+          <TableColumn fx:id="bPrice" prefWidth="138.0" text="Price (€) " />
+        </columns>
+      </TableView>
+      <TextArea editable="false" layoutX="4.0" layoutY="111.0" prefHeight="95.0" prefWidth="384.0" text="Example: &quot;A bike rental or bike hire business is a bicycle shop or other business that rents bikes for short periods of time (usually for a few hours) for a fee. Most rentals are provided by bike shops as a sideline to their main businesses of sales and service, but some shops specialize in rentals.As with car rental, bike rental shops primarily serve people who don't have access to a vehicle, typically travellers and particularly tourists&quot;" wrapText="true" />
+   </children>
+</AnchorPane>

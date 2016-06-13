@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<userss>
+
+
+
+
+
+
+<userBike id="1">
+        <enterSurname>Bogdan</enterSurname>
+        <enterName>Cadar</enterName>
+        <enterBikemodel>Colnago</enterBikemodel>
+        <enterDate>22.10.2016</enterDate>
+    </userBike>
+
+<userBike id="2">
+        <enterSurname>Andrei</enterSurname>
+        <enterName>Moldovan</enterName>
+        <enterBikemodel>Simplon PAVO</enterBikemodel>
+        <enterDate>12.08.2016</enterDate>
+    </userBike>
+</userss>
